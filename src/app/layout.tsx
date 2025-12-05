@@ -9,39 +9,95 @@ import { siteConfig } from "@/data/siteConfig"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} - Smart Photo Organizer | AI-Powered`,
-  description: siteConfig.description,
+  title: `${siteConfig.name} - Photo Cleaner App | Delete Duplicate Photos & Free Up Space`,
+  description: `${siteConfig.name} is the best photo cleaner app for iPhone & iPad. Remove duplicate photos, blurry images, and similar pictures. AI-powered photo organizer that helps you clean and organize your photo library. Free up storage space instantly with smart photo management.`,
   keywords: [
+    // Primary keywords
     "photo cleaner",
-    "duplicate finder",
+    "photo cleaner app",
+    "delete duplicate photos",
+    "duplicate photo finder",
+    "duplicate photo remover",
+
+    // Feature keywords
     "photo organizer",
-    "AI photo app",
+    "photo management app",
+    "organize photos",
+    "clean photo library",
+    "free up storage space",
     "storage cleaner",
-    "photo management",
-    "duplicate photos",
+    "photo storage manager",
+
+    // AI & Detection
+    "AI photo app",
+    "AI photo cleaner",
     "blurry photo detection",
+    "similar photo finder",
+    "duplicate image finder",
+    "smart photo organizer",
+
+    // Platform
+    "iPhone photo cleaner",
+    "iPad photo app",
+    "iOS photo organizer",
+    "photo cleaner for iPhone",
+
+    // Use cases
+    "remove duplicate photos",
+    "delete blurry photos",
+    "clean up photos",
+    "photo library cleanup",
+    "optimize photo storage",
+    "photo gallery cleaner",
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  applicationName: siteConfig.name,
+  category: "Photography",
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.tagline,
+    title: `${siteConfig.name} - Best Photo Cleaner & Duplicate Finder for iPhone`,
+    description: "AI-powered photo cleaner app. Remove duplicates, blurry photos, and free up storage. Organize your photo library effortlessly. 100% private & secure.",
     type: "website",
     locale: "en_US",
     siteName: siteConfig.name,
+    images: [
+      {
+        url: "/images/screenshots/launch.PNG",
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} - Photo Cleaner App`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.tagline,
+    title: `${siteConfig.name} - Photo Cleaner & Duplicate Finder`,
+    description: "AI-powered photo cleaner. Remove duplicates & blurry photos. Free up storage instantly. 100% private.",
+    images: ["/images/screenshots/launch.PNG"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
   },
   icons: {
     icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
+  verification: {
+    // Add your verification codes here when you have them
+    // google: "your-google-verification-code",
+    // yandex: "your-yandex-verification-code",
   },
 }
 
@@ -55,7 +111,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

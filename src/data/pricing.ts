@@ -6,10 +6,10 @@ export const pricingTiers: PricingTier[] = [
     name: 'Monthly Plan',
     price: 19.99,
     period: 'month',
-    highlighted: true,
+    highlighted: false,
     introOffer: {
       price: 9.99,
-      duration: '3 months'
+      duration: '3 days',
     },
     features: [
       'Unlimited photo scanning',
@@ -18,22 +18,27 @@ export const pricingTiers: PricingTier[] = [
       'Screenshot finder',
       'Storage analytics',
       'Smart recommendations',
-      'Priority support'
-    ]
+    ],
   },
   {
     id: 'yearly',
     name: 'Yearly Plan',
-    price: 49.99,
+    price: 34.99,
     period: 'year',
-    highlighted: false,
+    highlighted: true,
+    introOffer: {
+      price: 29.99,
+      duration: '3 days',
+    },
     features: [
       'All Monthly Plan features',
-      'Save 79% compared to monthly',
-      'Exclusive updates',
-      'Advanced analytics',
-      'Premium support',
-      'Early access to new features'
-    ]
-  }
+      'Save 58% compared to monthly',
+      'Unlimited photo scanning',
+      'AI-powered duplicate detection',
+      'Blurry photo detection',
+      'Screenshot finder',
+      'Storage analytics',
+      'Smart recommendations',
+    ],
+  },
 ]

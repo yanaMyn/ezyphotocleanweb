@@ -45,7 +45,7 @@ export function ReviewsSection() {
   }, [])
 
   return (
-    <section id="reviews" className="py-20 lg:py-32 overflow-hidden">
+    <section id="reviews" className="py-16 lg:py-24 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
