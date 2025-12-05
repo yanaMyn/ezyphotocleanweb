@@ -6,6 +6,7 @@ import { ReviewsSection } from '@/components/sections/ReviewsSection'
 import { PricingSection } from '@/components/sections/PricingSection'
 import { CTASection } from '@/components/sections/CTASection'
 import { siteConfig } from '@/data/siteConfig'
+import { Analytics } from '@vercel/analytics/next'
 
 export default function Home() {
   // Structured Data for SEO
@@ -57,7 +58,7 @@ export default function Home() {
     <>
       {/* Structured Data for SEO */}
       <script
-        type="application/ld+json"
+        type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
