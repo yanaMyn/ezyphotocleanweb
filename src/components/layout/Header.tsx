@@ -24,6 +24,7 @@ export function Header() {
     { name: "Features", href: "#features" },
     { name: "Pricing", href: "#pricing" },
     { name: "Reviews", href: "#reviews" },
+    { name: "Blog", href: "/blog" },
     { name: "Support", href: siteConfig.supportUrl },
   ]
 
