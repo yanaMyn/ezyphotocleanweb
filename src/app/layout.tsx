@@ -90,7 +90,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://ezyphotoclean.com',
   },
   icons: {
     icon: '/favicon.svg',

@@ -79,7 +79,7 @@ export function CTASection() {
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-all"
                 >
-                  <span className="font-semibold text-base">Learn more</span>
+                  <span className="font-semibold text-base">Get Help & Support</span>
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </div>
