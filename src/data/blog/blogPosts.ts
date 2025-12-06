@@ -184,7 +184,7 @@ Ready to clean your photo library? [Download Ezy Photo Clean from the App Store]
     slug: 'free-up-iphone-storage-without-deleting-photos',
     title: '10 Ways to Free Up iPhone Storage Without Deleting Photos',
     description:
-      'Running out of iPhone storage but don't want to delete your precious photos? Discover 10 proven methods to free up space while keeping your memories safe.',
+      "Running out of iPhone storage but don't want to delete your precious photos? Discover 10 proven methods to free up space while keeping your memories safe.",
     author: 'Ezy Photo Clean Team',
     publishedAt: '2025-01-06',
     updatedAt: '2025-01-06',

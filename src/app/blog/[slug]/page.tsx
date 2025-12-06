@@ -7,9 +7,9 @@ import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react'
 import { siteConfig } from '@/data/siteConfig'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogPostPageProps): Promise<Metadata> {
-  const post = getBlogPost(params.slug)
+  const { slug } = await params
+  const post = getBlogPost(slug)
 
   if (!post) {
     return {
@@ -60,8 +61,9 @@ export async function generateMetadata({
   }
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+  const post = getBlogPost(slug)
 
   if (!post) {
     notFound()
@@ -292,7 +294,7 @@ function formatMarkdown(markdown: string): string {
 
   // Lists - unordered
   html = html.replace(/^\- (.+)$/gim, '<li>$1</li>')
-  html = html.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+  html = html.replace(/(<li>[\s\S]*<\/li>)/m, '<ul>$1</ul>')
 
   // Lists - ordered
   html = html.replace(/^\d+\. (.+)$/gim, '<li>$1</li>')
@@ -308,7 +310,7 @@ function formatMarkdown(markdown: string): string {
         .join('')
       return `<tr>${cells}</tr>`
     })
-    html = html.replace(/(<tr>.*<\/tr>)/s, '<table>$1</table>')
+    html = html.replace(/(<tr>[\s\S]*<\/tr>)/m, '<table>$1</table>')
   }
 
   // Paragraphs
